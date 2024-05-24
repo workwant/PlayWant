@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<title>PlayWant: discover helpful/interesting/weird/fun/whatever information for free.</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<link rel="shortcut icon" href="/logo.png?t=qqaasdsadasdasdaaq" type=image/x-icon>
+<link rel="apple-touch-icon-precomposed" href="/logo.png?t=123aaaaasdsadasasdasdasdd6">
+<link type="text/css" href="./conf/index.css?t=2asd0" rel="stylesheet" />
+<style>
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        background: #000;
+        margin: 0;
+        padding: 0;
+        overscroll-behavior-y: contain;
+    }
+
+    .abox>.bbox {
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        touch-action: none;
+    }
+
+    .abox {
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        height: 568px;
+    }
+
+    .bbox {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-transition-property: -webkit-transform;
+        -moz-transition-property: -moz-transform;
+        -o-transition-property: -o-transform;
+        -ms-transition-property: -ms-transform;
+        transition-property: transform;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+    .ls {
+        position: relative;
+        font-size: 18px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-flex-shrink: 0;
+        -ms-flex: 0 0 auto;
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .ls video,
+    .ls .mimg,
+    .ls .ytb {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .bbox {
+        transition-duration: 600ms;
+        width: 760px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .play-ico {
+        width: 60px;
+        height: 60px;
+        opacity: .3;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        color: #fff;
+        animation: play-animation 1.1s linear;
+    }
+
+    @keyframes play-animation {
+        0% {
+            opacity: 0;
+            transform: scale(2)
+        }
+
+        10% {
+            opacity: .3;
+            transform: scale(1.2)
+        }
+
+        to {
+            transform: scale(1.2);
+            opacity: .3
+        }
+    }
+
+    .rmenu {
+        position: absolute;
+        z-index: 999;
+        bottom: 100px;
+        right: 10px;
+    }
+
+    .bmenu {
+        position: absolute;
+        z-index: 999;
+        bottom: 60px;
+        left: 10px;
+        right: 80px
+    }
+
+    .mag-0-10 {
+        margin: 0 10px;
+    }
+
+    .pad-0-10 {
+        padding: 0 10px;
+    }
+
+    .mag-t-16 {
+        margin-top: 16px;
+    }
+
+    .fs-3 {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+    }
+
+    .tx-img1 {
+        animation: cliprect 2s;
+    }
+
+    @keyframes cliprect {
+        0% {
+            -webkit-clip-path: inset(50% round 10% 50%);
+            clip-path: inset(50% round 10% 50%);
+        }
+
+        100% {
+            -webkit-clip-path: inset(0% round 0);
+            clip-path: inset(0% round 0);
+        }
+    }
+    .ytbplay{
+    position: absolute;
+    margin: auto;
+    
+    padding: 10px;
+    border-radius: 16px;
+    font-weight:bold;
+    background-color: rgba(0,20,0,0.4);
+
+    color: #fff;
+    }
+   
+</style>
+</head>
+<body id="body">
+    <div class="abox" id="abox">
+        <div class="bbox" id="bbox">
+        
+            <p id="ins"></p>
+        </div>
+        <div class="rmenu noi">
+            <div class="mag-10-0 center">
+                <a class="nopre" href="#">
+                    <img id="card-upic" class="muser h-36 br-50" style="border:1px solid #fff"
+                        src="http://imgcdn.herezone.com/img/nick/bing.png">
+                </a>
+            </div>
+            <div class="mag-10-0 center">
+                <img class="nopre h-30" src="./imgs/rmenu-like.png">
+                <div class="nopre pad_60 fc-f center fz-14 ">168</div>
+            </div>
+            <div class="mag-10-0 center">
+                <img class="mureply h-30" src="./imgs/rmenu-reply.png">
+                <div class="pad_60 fc-f center fz-14 ">168</div>
+            </div>
+            <div class="mag-10-0 center">
+                <img class="h-30" src="./imgs/rmenu-repost.png?t=qqq">
+                <div class="pad_60 fc-f center fz-14">168</div>
+            </div>
+        </div>
+        <div class="bmenu fc-f noi">
+            <a id="card-uname" class="pad_3 fc-f fw-b" href="/groups/1511144785" target="_blank"></a>
+            <div id="card-info" class="fs-3 fz-14"></div>
+        </div>
+    </div>
+    <div id="ar_pre" class="ar_pre no" style="left: 0;
+    position: fixed;
+    top: 50%;z-index:999
+    "><img class="ar_pre" style="transform:rotate(180deg)" src="./imgs/play-next.png"></div>
+    <div id="ar_next" class="ar_next no" style="right: 0;
+    position: fixed;
+    top: 50%;z-index:999
+    "><img class="ar_next" src="./imgs/play-next.png"></div>
+    <div class="flex flex-cz flex-cent p-fix" style="bottom:10px;left:0;right:0;z-index:999"><a class="flex-1 center" href="/settings"><img id="add_user"
+                class="ib h-26 br-50" src="./imgs/add-user.png?t=ccac"></a>
+                <a class="flex-1 center" href="/write"><img
+                    class="ib h-26" src="./imgs/add-new.png?t=ccc"></a>
+            </div>
+    <div id="repbox" class="repbox p-fix bc-f pad-0-10 no" style="
+    border-radius:10px 10px 0 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    max-width: 100%;
+    width: 660px;
+    z-index: 999;
+    height:80%;
+    margin: 0 auto;">
+        <div class="t-r"><span class="exitrepbox fz-20 pad_06">x</span></div>
+        <div id="rephtml" style="height: 100%;overflow: scroll;padding-bottom: 60px;">
+            <p id="repins" class="no"></p>
+        </div>
+    </div>
+    <div id="repchatbox" class="repchatbox p-fix dmain pad_6 bc-f w-100 no" style="left:0;right:0;bottom:0;z-index:999">
+        <div class="flex flex-cz">
+            <img id="guestimg" class="h-30 br-50" src="http://imgcdn.herezone.com/img/nick/beforedo.png">
+            <div contenteditable="true" id="ireplypost" class="flex-1 rich  w-100 bc-fc yuan  mag_06 pad_6 text-only"
+                style="overflow:auto" placeholder="Write a comment..."><br></div>
+            <span class="bjrep ib but_yuan">↑</span>
+        </div>
+    </div>
+    <div id="loadtip" class="loadtip bc">
+        tips
+    </div>
+</body>
+</html>
+ <script src='./conf/index.js?t=cccwqdc'></script>
+ <script src='./conf/i.js?t=cccasadasdassafsdfdc'></script>
+
